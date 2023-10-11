@@ -184,10 +184,9 @@ class BaseSatisfactionMenu extends Component<{api: KeyboardAPI}, State> {
             />
           </SectionContainer>
           <SectionContainer>
-            <h3>Default OLED Mode:</h3>
+            <h3>默认 OLED 显示屏模式:</h3>
             <p>
-              This is the OLED mode that will be selected by default when you
-              plug in your keyboard.
+              这是插入键盘时默认选择的 OLED 显示屏模式。
             </p>
             <OLEDSelectContainer>
               <Select
@@ -196,8 +195,8 @@ class BaseSatisfactionMenu extends Component<{api: KeyboardAPI}, State> {
                 options={OLED_OPTIONS}
               />
             </OLEDSelectContainer>
-            <h3>Current OLED Mode:</h3>
-            <p>Change your {"keyboard's"} current OLED mode</p>
+            <h3>当前 OLED 模式:</h3>
+            <p>更改 {"keyboard's"} 当前的 OLED 模式</p>
             <OLEDSelectContainer>
               <Select
                 value={OLED_OPTIONS.find((e) => e.value === currOLEDMode)}
@@ -208,12 +207,12 @@ class BaseSatisfactionMenu extends Component<{api: KeyboardAPI}, State> {
             </OLEDSelectContainer>
           </SectionContainer>
           <SectionContainer>
-            <h3>Custom Encoder Configuration:</h3>
-            <p>Configure the behavior of encoder custom modes</p>
+            <h3>自定义编码器配置:</h3>
+            <p>自定义编码器的行为</p>
             <CustomEncoderContainer>
-              <LabelText>CW</LabelText>
-              <LabelText>CCW</LabelText>
-              <LabelText>Press</LabelText>
+              <LabelText>顺时针</LabelText>
+              <LabelText>逆时针</LabelText>
+              <LabelText>按压触发</LabelText>
             </CustomEncoderContainer>
             <EncoderCustomConfig
               title="Custom 0"

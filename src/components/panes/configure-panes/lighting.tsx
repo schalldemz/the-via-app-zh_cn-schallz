@@ -47,7 +47,7 @@ export const Pane: FC = () => {
   const getMenus = () => {
     if (!isVIADefinitionV2(selectedDefinition)) {
       throw new Error(
-        'This lighting component is only compatible with v2 definitions',
+        '灯光组件只兼容第 2 版定义',
       );
     }
 

@@ -6,7 +6,7 @@ function buildDefinitions() {
     return;
   }
 
-  console.log('Definitions not found. Building...');
+  console.log('未找到定义. 构建中...');
 
   exec('via-keyboards public/definitions', (error, stdout, stderr) => {
     if (error) {

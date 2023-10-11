@@ -17,7 +17,7 @@ export const ExternalLinks = () => (
     <a href="https://caniusevia.com/" target="_blank">
       <CategoryIconContainer>
         <VIALogo height="25px" fill="currentColor" />
-        <CategoryMenuTooltip>Firmware + Docs</CategoryMenuTooltip>
+        <CategoryMenuTooltip>固件和文档</CategoryMenuTooltip>
       </CategoryIconContainer>
     </a>
     <a href="https://discord.gg/NStTR5YaPB" target="_blank">

@@ -37,7 +37,7 @@ type AdvancedControlMeta = [
 const RGBControls: ControlMeta[] = [
   [
     LightingValue.BACKLIGHT_DISABLE_WHEN_USB_SUSPENDED,
-    'Disable LEDs when USB is suspended',
+    '当 USB 停止时关闭 LED 灯珠',
     {type: 'slider'},
   ],
   [
@@ -55,7 +55,7 @@ const RGBControls: ControlMeta[] = [
         <span>
           LED Sleep Timeout:{' '}
           <AccentText>
-            {!valArr[0] ? 'Never' : `After ${valArr[0]} mins`}
+            {!valArr[0] ? '永不' : `在 ${valArr[0]} 分钟之后`}
           </AccentText>
         </span>
       );
@@ -64,42 +64,42 @@ const RGBControls: ControlMeta[] = [
   ],
   [
     LightingValue.BACKLIGHT_CAPS_LOCK_INDICATOR_COLOR,
-    'Caps Lock indicator color',
+    '大写锁定指示灯颜色',
     {type: 'color'},
   ],
   [
     LightingValue.BACKLIGHT_CAPS_LOCK_INDICATOR_ROW_COL,
-    'Caps Lock indicator',
+    '大写锁定指示灯位置',
     {type: 'row_col'},
   ],
   [
     LightingValue.BACKLIGHT_LAYER_1_INDICATOR_COLOR,
-    'Layer 1 indicator color',
+    '键层 1 指示灯颜色',
     {type: 'color'},
   ],
   [
     LightingValue.BACKLIGHT_LAYER_1_INDICATOR_ROW_COL,
-    'Layer 1 indicator',
+    '键层 1 指示灯位置',
     {type: 'row_col'},
   ],
   [
     LightingValue.BACKLIGHT_LAYER_2_INDICATOR_COLOR,
-    'Layer 2 indicator color',
+    '键层 2 指示灯颜色',
     {type: 'color'},
   ],
   [
     LightingValue.BACKLIGHT_LAYER_2_INDICATOR_ROW_COL,
-    'Layer 2 indicator',
+    '键层 2 指示灯位置',
     {type: 'row_col'},
   ],
   [
     LightingValue.BACKLIGHT_LAYER_3_INDICATOR_COLOR,
-    'Layer 3 indicator color',
+    '键层 3 指示灯颜色',
     {type: 'color'},
   ],
   [
     LightingValue.BACKLIGHT_LAYER_3_INDICATOR_ROW_COL,
-    'Layer 3 indicator',
+    '键层 3 指示灯位置',
     {type: 'row_col'},
   ],
 ];

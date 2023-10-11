@@ -65,7 +65,7 @@ export const LayerControl = () => {
 
   return (
     <Container>
-      <Label>Layer</Label>
+      <Label>层</Label>
       {Layers}
     </Container>
   );

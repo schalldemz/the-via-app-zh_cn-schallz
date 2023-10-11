@@ -23,14 +23,14 @@ export const LayoutConfigValues = [
 ];
 
 const BooleanControls: [LightingValue, string][] = [
-  [LightingValue.BACKLIGHT_USE_7U_SPACEBAR, 'Use 7U Spacebar LEDs'],
-  [LightingValue.BACKLIGHT_USE_ISO_ENTER, 'Use ISO Enter LEDs'],
-  [LightingValue.BACKLIGHT_USE_SPLIT_BACKSPACE, 'Use Split Backspace LEDs'],
-  [LightingValue.BACKLIGHT_USE_SPLIT_LEFT_SHIFT, 'Use Split Left Shift LEDs'],
-  [LightingValue.BACKLIGHT_USE_SPLIT_RIGHT_SHIFT, 'Use Split Right Shift LEDs'],
+  [LightingValue.BACKLIGHT_USE_7U_SPACEBAR, '使用 7U 空格 LED'],
+  [LightingValue.BACKLIGHT_USE_ISO_ENTER, '使用 ISO 回车 LED'],
+  [LightingValue.BACKLIGHT_USE_SPLIT_BACKSPACE, '使用分裂空格 LED'],
+  [LightingValue.BACKLIGHT_USE_SPLIT_LEFT_SHIFT, '使用分裂左 Shift LED'],
+  [LightingValue.BACKLIGHT_USE_SPLIT_RIGHT_SHIFT, '使用分裂右 Shift LED'],
   [
     LightingValue.BACKLIGHT_DISABLE_HHKB_BLOCKER_LEDS,
-    'Disable HHKB Blocker LEDs',
+    '关闭被 HHKB 配列遮挡的 LED',
   ],
 ];
 
@@ -45,7 +45,7 @@ export const Pane: FC = () => {
 
   if (!isVIADefinitionV2(selectedDefinition)) {
     throw new Error(
-      'This lighting component is only compatible with v2 definitions',
+      '灯光组件只兼容第 2 版定义',
     );
   }
 

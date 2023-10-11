@@ -24,12 +24,12 @@ const BacklightControls: [
 ][] = [
   [
     LightingValue.BACKLIGHT_BRIGHTNESS,
-    'Brightness',
+    '亮度',
     {type: 'range', min: 0, max: 255},
   ],
   [
     LightingValue.BACKLIGHT_EFFECT,
-    'Effect',
+    '效果',
     {
       type: 'select',
       getOptions: (definition: VIADefinitionV2 | VIADefinitionV3) =>
@@ -41,7 +41,7 @@ const BacklightControls: [
   ],
   [
     LightingValue.BACKLIGHT_EFFECT_SPEED,
-    'Effect Speed',
+    '动画速度',
     {type: 'range', min: 0, max: 3},
   ],
 ];
@@ -53,12 +53,12 @@ const UnderglowControls: [
 ][] = [
   [
     LightingValue.QMK_RGBLIGHT_BRIGHTNESS,
-    'Underglow Brightness',
+    '底灯亮度',
     {type: 'range', min: 0, max: 255},
   ],
   [
     LightingValue.QMK_RGBLIGHT_EFFECT,
-    'Underglow Effect',
+    '底灯效果',
     {
       type: 'select',
       getOptions: (definition: VIADefinitionV2 | VIADefinitionV3) =>
@@ -70,7 +70,7 @@ const UnderglowControls: [
   ],
   [
     LightingValue.QMK_RGBLIGHT_EFFECT_SPEED,
-    'Underglow Effect Speed',
+    '底灯动画速度',
     {type: 'range', min: 0, max: 3},
   ],
 ];
@@ -86,7 +86,7 @@ export const GeneralPane: FC = () => {
 
   if (!isVIADefinitionV2(selectedDefinition)) {
     throw new Error(
-      'This lighting component is only compatible with v2 definitions',
+      '灯光组件只兼容第 2 版定义',
     );
   }
 
@@ -150,7 +150,7 @@ export const GeneralPane: FC = () => {
 
             return (
               <ControlRow key={val}>
-                <Label>Color {val}</Label>
+                <Label>颜色 {val}</Label>
                 <Detail>
                   <ColorPicker color={color} setColor={setColor} />
                 </Detail>
@@ -161,7 +161,7 @@ export const GeneralPane: FC = () => {
           <LightingControl
             meta={[
               LightingValue.QMK_RGBLIGHT_COLOR,
-              'Underglow Color',
+              '底灯颜色',
               {type: 'color'},
             ]}
           />

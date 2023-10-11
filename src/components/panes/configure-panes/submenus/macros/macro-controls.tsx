@@ -85,9 +85,9 @@ export const MacroEditControls: React.FC<{
       <IconButtonTooltip>
         {isFullscreen
           ? isRecording
-            ? 'Stop Recording'
-            : 'Record Keystrokes'
-          : 'Can only record when fullscreen'}
+            ? '结束录制'
+            : '录制按键'
+          : '只能在全屏模式下录制 (F11)'}
       </IconButtonTooltip>
     </IconButtonContainer>
   );
@@ -155,7 +155,7 @@ export const MacroEditControls: React.FC<{
               icon={isFullscreen ? faCompress : faExpand}
             />
             <IconButtonTooltip>
-              {isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}
+              {isFullscreen ? '退出全屏' : '全屏'}
             </IconButtonTooltip>
           </IconButtonContainer>
         }
@@ -171,8 +171,8 @@ export const MacroEditControls: React.FC<{
               <FontAwesomeIcon size={'sm'} icon={faMagicWandSparkles} />
               <IconButtonTooltip>
                 {!optimizeRecording
-                  ? 'Use Smart Optimization'
-                  : 'Skip Smart Optimization'}
+                  ? '进行智能优化'
+                  : '跳过智能优化'}
               </IconButtonTooltip>
             </IconToggleContainer>
             <IconToggleContainer
@@ -187,10 +187,10 @@ export const MacroEditControls: React.FC<{
               />
               <IconButtonTooltip>
                 {!isDelaySupported
-                  ? 'Upgrade firmware to use delays'
+                  ? '升级固件以使用延时'
                   : !recordDelays
-                  ? 'Record Delays'
-                  : 'Skip Recording Delays'}
+                  ? '录制延时'
+                  : '跳过录制延时'}
               </IconButtonTooltip>
             </IconToggleContainer>
           </MacroControlGroupContainer>

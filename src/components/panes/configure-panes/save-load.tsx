@@ -157,19 +157,19 @@ export const Pane: FC = () => {
     setSuccessMessage(null);
     const reader = new FileReader();
 
-    reader.onabort = () => setErrorMessage('File reading was cancelled.');
-    reader.onerror = () => setErrorMessage('Failed to read file.');
+    reader.onabort = () => setErrorMessage('文件读取已取消');
+    reader.onerror = () => setErrorMessage('无法读取文件');
 
     reader.onload = async () => {
       const saveFile = JSON.parse((reader as any).result.toString());
       if (!isViaSaveFile(saveFile)) {
-        setErrorMessage('Could not load file: invalid data.');
+        setErrorMessage('无法加载文件：无效数据');
         return;
       }
 
       if (saveFile.vendorProductId !== selectedDefinition.vendorProductId) {
         setErrorMessage(
-          `Could not import layout. This file was created for a different keyboard: ${saveFile.name}`,
+          `无法导入配列：这把键盘不适配此文件: ${saveFile.name}`,
         );
         return;
       }
@@ -180,7 +180,7 @@ export const Pane: FC = () => {
         ) > -1
       ) {
         setErrorMessage(
-          'Could not import layout: incorrect number of keys in one or more layers.',
+          '无法导入配列：按键数量在一个或多个键层有误',
         );
         return;
       }
@@ -188,7 +188,7 @@ export const Pane: FC = () => {
       if (macros.isFeatureSupported && saveFile.macros) {
         if (saveFile.macros.length !== expressions.length) {
           setErrorMessage(
-            'Could not import layout: incorrect number of macros.',
+            '无法导入配列：宏数量有误',
           );
           return;
         }
@@ -236,7 +236,7 @@ export const Pane: FC = () => {
         );
       }
 
-      setSuccessMessage('Successfully updated layout!');
+      setSuccessMessage('成功更新配列！');
     };
 
     reader.readAsBinaryString(file);
@@ -247,15 +247,15 @@ export const Pane: FC = () => {
       <SaveLoadPane>
         <Container>
           <ControlRow>
-            <Label>Save Current Layout</Label>
+            <Label>保存当前配列</Label>
             <Detail>
-              <AccentButton onClick={saveLayout}>Save</AccentButton>
+              <AccentButton onClick={saveLayout}>保存</AccentButton>
             </Detail>
           </ControlRow>
           <ControlRow>
-            <Label>Load Saved Layout</Label>
+            <Label>加载已保存的配列</Label>
             <Detail>
-              <AccentUploadButton onLoad={loadLayout}>Load</AccentUploadButton>
+              <AccentUploadButton onLoad={loadLayout}>加载</AccentUploadButton>
             </Detail>
           </ControlRow>
           {errorMessage ? <ErrorMessage>{errorMessage}</ErrorMessage> : null}

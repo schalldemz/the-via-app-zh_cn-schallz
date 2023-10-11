@@ -95,7 +95,7 @@ export const Settings = () => {
             <Row $selected={true}>
               <IconContainer>
                 <FontAwesomeIcon icon={faToolbox} />
-                <MenuTooltip>General</MenuTooltip>
+                <MenuTooltip>通用</MenuTooltip>
               </IconContainer>
             </Row>
           </MenuContainer>
@@ -103,7 +103,7 @@ export const Settings = () => {
         <SpanOverflowCell style={{flex: 1, borderWidth: 0}}>
           <Container>
             <ControlRow>
-              <Label>Show Design tab</Label>
+              <Label>显示设计页面的标签</Label>
               <Detail>
                 <AccentSlider
                   onChange={() => dispatch(toggleCreatorMode())}
@@ -112,7 +112,7 @@ export const Settings = () => {
               </Detail>
             </ControlRow>
             <ControlRow>
-              <Label>Fast Key Mapping</Label>
+              <Label>快速按键定义</Label>
               <Detail>
                 <AccentSlider
                   onChange={() => dispatch(toggleFastRemap())}
@@ -121,7 +121,7 @@ export const Settings = () => {
               </Detail>
             </ControlRow>
             <ControlRow>
-              <Label>Light Mode</Label>
+              <Label>明亮模式</Label>
               <Detail>
                 <AccentSlider
                   onChange={() => dispatch(toggleThemeMode())}
@@ -130,7 +130,7 @@ export const Settings = () => {
               </Detail>
             </ControlRow>
             <ControlRow>
-              <Label>Keycap Theme</Label>
+              <Label>键帽主题</Label>
               <Detail>
                 <AccentSelect
                   defaultValue={themeDefaultValue}
@@ -142,7 +142,7 @@ export const Settings = () => {
               </Detail>
             </ControlRow>
             <ControlRow>
-              <Label>Render Mode</Label>
+              <Label>渲染模式</Label>
               <Detail>
                 <AccentSelect
                   defaultValue={renderModeDefaultValue}
@@ -154,7 +154,7 @@ export const Settings = () => {
               </Detail>
             </ControlRow>
             <ControlRow>
-              <Label>Show Diagnostic Information</Label>
+              <Label>显示诊断信息</Label>
 
               <Detail>
                 {selectedDevice ? (
@@ -164,7 +164,7 @@ export const Settings = () => {
                   />
                 ) : (
                   <SettingsErrorMessage>
-                    Requires connected device
+                    要求已连接设备
                   </SettingsErrorMessage>
                 )}
               </Detail>
@@ -173,7 +173,7 @@ export const Settings = () => {
           {showDiagnostics && selectedDevice ? (
             <DiagnosticContainer>
               <ControlRow>
-                <Label>VIA Firmware Protocol</Label>
+                <Label>VIA 固件协议</Label>
                 <Detail>{selectedDevice.protocol}</Detail>
               </ControlRow>
             </DiagnosticContainer>

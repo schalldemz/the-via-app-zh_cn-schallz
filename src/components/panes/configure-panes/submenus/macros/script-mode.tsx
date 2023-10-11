@@ -142,7 +142,7 @@ export const ScriptMode: React.FC<{
           minChar={0}
           textAreaComponent={TextArea as any}
           movePopupAsYouType={true}
-          placeholder={`Enter the macro you want M${macroIndex} to execute...`}
+          placeholder={`输入您想使用的宏值 M${macroIndex} 开始运行...`}
           trigger={{
             '?': {
               dataProvider: findKeycodes,
@@ -177,26 +177,26 @@ export const ScriptMode: React.FC<{
         <DescriptionLabel>
           <ToastErrorMessage>{errorMessage}</ToastErrorMessage>
           <Message>
-            Enter text directly, or wrap{' '}
+            直接输入文本, 或用{' '}包裹
             <Link href="https://docs.qmk.fm/#/keycodes_basic" target="_blank">
-              Basic Keycodes
+              基础键值
             </Link>{' '}
-            in {'{}'}
+            在 {'{}'}
           </Message>
-          <Message>Single tap: {'{KC_XXX}'}</Message>
-          <Message>Chord: {'{KC_XXX, KC_YYY, KC_ZZZ}'}</Message>
-          <Message>Keydown: {`{+KC_XXX}`}</Message>
-          <Message>Keyup: {`{-KC_XXX}`}</Message>
+          <Message>单击: {'{KC_XXX}'}</Message>
+          <Message>同时触发: {'{KC_XXX, KC_YYY, KC_ZZZ}'}</Message>
+          <Message>按下: {`{+KC_XXX}`}</Message>
+          <Message>松开: {`{-KC_XXX}`}</Message>
           {isDelaySupported ? (
-            <Message>Delay (ms): {'{NNNN}'} </Message>
+            <Message>延时 (ms): {'{NNNN}'} </Message>
           ) : (
-            'Upgrade firmware to use delays'
+            '升级键盘固件以使用延时'
           )}
-          <Message>Type ? to search for keycodes</Message>
+          <Message>输入 ? 搜索键值</Message>
         </DescriptionLabel>
         <Detail>
           <AccentButton disabled={macro === currentValue} onClick={saveMacro}>
-            Save
+            保存
           </AccentButton>
         </Detail>
       </AutoHeightRow>

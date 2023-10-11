@@ -173,17 +173,16 @@ export const Home: React.FC<HomeProps> = (props) => {
     <ErrorHome ref={homeElem} tabIndex={0}>
       <UsbError>
         <UsbErrorIcon>❌</UsbErrorIcon>
-        <UsbErrorHeading>USB Detection Error</UsbErrorHeading>
+        <UsbErrorHeading>USB 识别错误</UsbErrorHeading>
         <p>
-          Looks like there was a problem getting USB detection working. Right
-          now, we only support{' '}
+          USB 设备的识别可能有问题。当前，我们仅支持{' '}
           <UsbErrorWebHIDLink
             href="https://caniuse.com/?search=webhid"
             target="_blank"
           >
-            browsers that have WebHID enabled
+            启用了 WebHID 的浏览器
           </UsbErrorWebHIDLink>
-          , so make sure yours is compatible before trying again.
+          ，重试之前请确认您的浏览器适配了此功能
         </p>
       </UsbError>
     </ErrorHome>

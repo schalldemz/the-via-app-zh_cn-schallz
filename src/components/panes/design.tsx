@@ -268,9 +268,7 @@ export const DesignTab: FC = () => {
           localStorage.setItem('designWarningSeen', `${designWarningSeen}`);
         }}
       >
-        This feature is intended for development purposes. If your keyboard is
-        not recognized automatically by VIA, please contact your keyboard's
-        manufacturer or vendor.
+        此功能用于开发目的。如果您的键盘不能被 VIA 自动识别，请联系您的键盘的制造商或者供应商
       </MessageDialog>
       <SinglePaneFlexCell ref={flexRef}>
         {!definition && (
@@ -298,7 +296,7 @@ export const DesignTab: FC = () => {
             <Row $selected={true}>
               <IconContainer>
                 <FontAwesomeIcon icon={faBook} />
-                <MenuTooltip>Add Definition</MenuTooltip>
+                <MenuTooltip>加载定义文件</MenuTooltip>
               </IconContainer>
             </Row>
           </MenuContainer>
@@ -306,7 +304,7 @@ export const DesignTab: FC = () => {
         <SpanOverflowCell>
           <Container>
             <ControlRow>
-              <Label>Load Draft Definition</Label>
+              <Label>加载草稿定义文件</Label>
               <Detail>
                 <AccentUploadButton
                   multiple
@@ -320,12 +318,12 @@ export const DesignTab: FC = () => {
                     );
                   }}
                 >
-                  Load
+                  加载
                 </AccentUploadButton>
               </Detail>
             </ControlRow>
             <ControlRow>
-              <Label>Use V2 definitions (deprecated)</Label>
+              <Label>使用第二版定义文件 (已停用)</Label>
               <Detail>
                 <AccentSlider
                   isChecked={definitionVersion === 'v2'}
@@ -338,7 +336,7 @@ export const DesignTab: FC = () => {
             {definition && (
               <>
                 <ControlRow>
-                  <Label>Shown Keyboard Definition</Label>
+                  <Label>已显示键盘定义文件</Label>
                   <Detail>
                     <AccentSelect
                       onChange={(option: any) => {
@@ -369,7 +367,7 @@ export const DesignTab: FC = () => {
             )}
             {definition && (
               <ControlRow>
-                <Label>Show Matrix</Label>
+                <Label>显示键盘矩阵</Label>
                 <Detail>
                   <AccentSlider
                     isChecked={showMatrix}
@@ -386,7 +384,7 @@ export const DesignTab: FC = () => {
               </IndentedControlRow>
             ))}
             <ControlRow>
-              <Label>Draft Definitions</Label>
+              <Label>草稿定义</Label>
               <Detail>
                 {Object.values(versionDefinitions).length} Definitions
               </Detail>

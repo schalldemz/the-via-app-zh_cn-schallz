@@ -84,19 +84,19 @@ export const Test: FC = () => {
 
   const waveformOptions = [
     {
-      label: 'Sine',
+      label: '正弦波',
       value: 'sine',
     },
     {
-      label: 'Triangle',
+      label: '三角波',
       value: 'triangle',
     },
     {
-      label: 'Sawtooth',
+      label: '锯齿波',
       value: 'sawtooth',
     },
     {
-      label: 'Square',
+      label: '正方波',
       value: 'square',
     },
   ];
@@ -106,15 +106,15 @@ export const Test: FC = () => {
 
   const modeOptions = [
     {
-      label: 'Wicki-Hayden',
+      label: '全音阶',
       value: TestKeyboardSoundsMode.WickiHayden,
     },
     {
-      label: 'Chromatic',
+      label: '半音阶',
       value: TestKeyboardSoundsMode.Chromatic,
     },
     {
-      label: 'Random',
+      label: '随机',
       value: TestKeyboardSoundsMode.Random,
     },
   ];
@@ -130,7 +130,7 @@ export const Test: FC = () => {
             <Row $selected={true}>
               <IconContainer>
                 <FontAwesomeIcon icon={faCircleQuestion} />
-                <MenuTooltip>Check Key</MenuTooltip>
+                <MenuTooltip>按键检查</MenuTooltip>
               </IconContainer>
             </Row>
           </MenuContainer>
@@ -138,16 +138,16 @@ export const Test: FC = () => {
         <SpanOverflowCell>
           <Container>
             <ControlRow>
-              <Label>Reset Keyboard</Label>
+              <Label>重置键盘</Label>
               <Detail>
                 <AccentButton onClick={testContextObj.clearTestKeys}>
-                  Reset
+                  重置
                 </AccentButton>
               </Detail>
             </ControlRow>
             {canUseMatrixState && selectedDefinition ? (
               <ControlRow>
-                <Label>Test Matrix</Label>
+                <Label>测试键盘矩阵</Label>
                 <Detail>
                   <AccentSlider
                     isChecked={isTestMatrixEnabled}
@@ -160,7 +160,7 @@ export const Test: FC = () => {
               </ControlRow>
             ) : null}
             <ControlRow>
-              <Label>Key Sounds</Label>
+              <Label>按键声音</Label>
               <Detail>
                 <AccentSlider
                   isChecked={testKeyboardSoundsSettings.isEnabled}
@@ -175,7 +175,7 @@ export const Test: FC = () => {
               </Detail>
             </ControlRow>
             <ControlRow>
-              <Label>Volume</Label>
+              <Label>声音音量</Label>
               <Detail>
                 <AccentRange
                   max={100}
@@ -192,7 +192,7 @@ export const Test: FC = () => {
               </Detail>
             </ControlRow>
             <ControlRow>
-              <Label>Transpose</Label>
+              <Label>声音音高</Label>
               <Detail>
                 <AccentRange
                   max={24}
@@ -209,7 +209,7 @@ export const Test: FC = () => {
               </Detail>
             </ControlRow>
             <ControlRow>
-              <Label>Waveform</Label>
+              <Label>声音波形</Label>
               <Detail>
                 <AccentSelect
                   isSearchable={false}
@@ -227,7 +227,7 @@ export const Test: FC = () => {
               </Detail>
             </ControlRow>
             <ControlRow>
-              <Label>Mode</Label>
+              <Label>声音模式</Label>
               <Detail>
                 <AccentSelect
                   isSearchable={false}

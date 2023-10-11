@@ -201,8 +201,7 @@ export const KeycodePane: FC = () => {
   const renderMacroError = () => {
     return (
       <ErrorMessage>
-        Your current firmware does not support macros. Install the latest
-        firmware for your device.
+        当前已安装的固件不支持宏。请尝试安装最新版固件
       </ErrorMessage>
     );
   };
@@ -288,7 +287,7 @@ export const KeycodePane: FC = () => {
       <CustomKeycode
         key="customKeycode"
         onClick={() => selectedKey !== null && handleClick('text', 0)}
-        onMouseOver={() => setMouseOverDesc('Enter any QMK Keycode')}
+        onMouseOver={() => setMouseOverDesc('输入任意 QMK 键值')}
         onMouseOut={() => setMouseOverDesc(null)}
       >
         Any

@@ -34,8 +34,7 @@ const Container = styled.div`
 const renderEncoderError = () => {
   return (
     <ErrorMessage>
-      Your current firmware does not support rotary encoders. Install the latest
-      firmware for your device.
+      您当前的固件不支持旋转编码器。请尝试安装最新版固件。
     </ErrorMessage>
   );
 };
@@ -117,7 +116,7 @@ export const Pane: FC = () => {
       <Encoder>
         <Container>
           <ControlRow>
-            <Label>Rotate Counterclockwise</Label>
+            <Label>逆时针旋转</Label>
             <Detail>
               <PelpiKeycodeInput
                 value={ccwValue}
@@ -127,7 +126,7 @@ export const Pane: FC = () => {
             </Detail>
           </ControlRow>
           <ControlRow>
-            <Label>Rotate Clockwise</Label>
+            <Label>顺时针旋转</Label>
             <Detail>
               <PelpiKeycodeInput
                 value={cwValue}
@@ -138,7 +137,7 @@ export const Pane: FC = () => {
           </ControlRow>
           {canClick && (
             <ControlRow>
-              <Label>Press Encoder</Label>
+              <Label>按压触发</Label>
               <Detail>
                 <PelpiKeycodeInput
                   value={val}
